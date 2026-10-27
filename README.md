@@ -1,7 +1,102 @@
 ﻿<div align="center">
 
-<!-- ═══════════════ ANIMATED HEADER BANNER ═══════════════ -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:0f2a4a,100:00b4d8&height=220&section=header&text=Abu%20Rayhan&fontSize=60&fontColor=ffffff&fontAlignY=38&desc=Full-Stack%20Web%20Developer%20%26%20AI%20Automation%20Creator&descAlignY=58&descSize=18&descColor=90e0ef&animation=fadeIn" width="100%"/>
+<svg width="100%" height="250" viewBox="0 0 900 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Dark gradient background -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0f2a4a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#001d3d;stop-opacity:1" />
+    </linearGradient>
+    <!-- Cyan glow gradient for text -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#90e0ef;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#00b4d8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0077b6;stop-opacity:1" />
+    </linearGradient>
+    <!-- Glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Wave clip path -->
+    <clipPath id="waveClip">
+      <path d="M0,0 L900,0 L900,220 Q675,250 450,230 Q225,210 0,240 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="250" fill="url(#bgGrad)" rx="0"/>
+
+  <!-- Animated wave shape at bottom -->
+  <path d="M0,200 Q225,170 450,190 Q675,210 900,180 L900,250 L0,250 Z" fill="#00b4d8" opacity="0.12">
+    <animate attributeName="d"
+      values="M0,200 Q225,170 450,190 Q675,210 900,180 L900,250 L0,250 Z;
+              M0,210 Q225,185 450,200 Q675,215 900,190 L900,250 L0,250 Z;
+              M0,200 Q225,170 450,190 Q675,210 900,180 L900,250 L0,250 Z"
+      dur="4s" repeatCount="indefinite"/>
+  </path>
+  <path d="M0,215 Q225,190 450,205 Q675,220 900,195 L900,250 L0,250 Z" fill="#0077b6" opacity="0.15">
+    <animate attributeName="d"
+      values="M0,215 Q225,190 450,205 Q675,220 900,195 L900,250 L0,250 Z;
+              M0,225 Q225,200 450,215 Q675,230 900,205 L900,250 L0,250 Z;
+              M0,215 Q225,190 450,205 Q675,220 900,195 L900,250 L0,250 Z"
+      dur="5s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Glowing dot particles -->
+  <circle cx="80" cy="60" r="2" fill="#00b4d8" opacity="0.6">
+    <animate attributeName="opacity" values="0.2;0.9;0.2" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="820" cy="50" r="3" fill="#90e0ef" opacity="0.5">
+    <animate attributeName="opacity" values="0.1;0.8;0.1" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="150" cy="180" r="1.5" fill="#00b4d8" opacity="0.4">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="750" cy="170" r="2.5" fill="#90e0ef" opacity="0.5">
+    <animate attributeName="opacity" values="0.2;0.7;0.2" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="450" cy="30" r="2" fill="#00b4d8" opacity="0.4">
+    <animate attributeName="opacity" values="0.1;0.6;0.1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Horizontal accent line -->
+  <line x1="280" y1="155" x2="620" y2="155" stroke="#00b4d8" stroke-width="1" opacity="0.4">
+    <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Main Name: Abu Rayhan -->
+  <text
+    x="450" y="115"
+    font-family="'Segoe UI', Arial, sans-serif"
+    font-size="64"
+    font-weight="900"
+    text-anchor="middle"
+    fill="url(#textGrad)"
+    filter="url(#glow)"
+    letter-spacing="4">
+    Abu Rayhan
+    <animate attributeName="opacity" values="0;1" dur="1.5s" fill="freeze"/>
+  </text>
+
+  <!-- Subtitle -->
+  <text
+    x="450" y="170"
+    font-family="'Segoe UI', Arial, sans-serif"
+    font-size="17"
+    font-weight="400"
+    text-anchor="middle"
+    fill="#90e0ef"
+    letter-spacing="2"
+    opacity="0">
+    Full-Stack Web Developer  &amp;  AI Automation Creator
+    <animate attributeName="opacity" values="0;0.85" dur="2s" begin="0.8s" fill="freeze"/>
+  </text>
+</svg>
 
 <!-- ═══════════════ TYPING HEADLINE ═══════════════ -->
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00B4D8&center=true&vCenter=true&width=700&lines=Full-Stack+Web+Developer;React+%26+Next.js+Specialist;Backend+%26+API+Architect;AI+Automation+Creator;Building+Digital+Products+that+Matter)](https://git.io/typing-svg)
